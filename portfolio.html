@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Gilead Owen</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        #hero-about {
+            position: relative;
+            width: 100%;
+            height: 100vh; 
+            background-image: linear-gradient(rgba(75, 0, 130, 0.7), rgba(48, 0, 83, 0.9)), 
+                              url('https://images.unsplash.com/photo-1549887552-cb1071d3e5ca?q=80&w=1965');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #hero-about .container {
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+       
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            margin-bottom: 30px;
+        }
+
+       
+        #hero-about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-transform: capitalize;
+        }
+
+        #hero-about .name {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        #hero-about p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        
+        .btn-view {
+            padding: 12px 30px;
+            background-color: #6a0dad; 
+            color: white;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn-view:hover {
+            background-color: #4b0082; 
+        }
+
+        
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+            font-size: 1.2rem;
+        }
+        
+        
+        .social-icons a {
+            color: #6a0dad; 
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: white;
+        }
+
+        
+        #services {
+            padding: 80px 20px;
+            background-color: #f9f9f9;
+        }
+
+        #services .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #333;
+        }
+
+       
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+       
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 25px;
+            text-align: left;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: #666;
+            color: #777;
+        }
+
+        
+        #contact {
+            padding: 80px 20px;
+            background-color: #ffffff;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        #contact .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #333;
+        }
+
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+       
+        .contact-info h4 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .input-group input, .input-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fcfcfc;
+        }
+
+        .input-group textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        
+        .btn-send {
+            padding: 12px;
+            background-color: #6a0dad; 
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            max-width: 150px;
+        }
+
+        .btn-send:hover {
+            background-color: #4b0082; 
+        }
+    </style>
+</head>
+<body>
+
+    <section id="hero-about">
+        <div class="container">
+            <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=1974" alt="Emmanuel Akinjosotu" class="profile-img">
+            
+            <h2>Hello, I'm</h2>
+            <p class="name">Gilead Owen</p>
+            <p>A passionate web designer and developer with experience in creating visually appealing and user-friendly websites. I specialize in using modern technologies to build responsive and accessible web applications.</p>
+            
+            <a href="#services" class="btn-view">View My Work</a>
+
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f">f</i></a>
+                <a href="#"><i class="fab fa-twitter">t</i></a>
+                <a href="#"><i class="fab fa-linkedin-in">in</i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h3 class="section-title">My Service</h3>
+        
+        <div class="services-grid">
+            
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=2070" alt="Web Design" class="card-img">
+                <div class="card-content">
+                    <h4 class="card-title">Web Design</h4>
+                    <p class="card-desc">Modern and user-friendly design</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070" alt="Java Development" class="card-img">
+                <div class="card-content">
+                    <h4 class="card-title">Java Development</h4>
+                    <p class="card-desc">Professional Java developer</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070" alt="Mobile Development" class="card-img">
+                <div class="card-content">
+                    <h4 class="card-title">Mobile Development</h4>
+                    <p class="card-desc">Custom and unique mobile development</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h3 class="section-title">Contact Me</h3>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <h4>Get in Touch</h4>
+                <p>📍 Nigeria, Port Harcourt</p>
+                <p>📞 +234 09137443912</p>
+                <p>✉️ owengilead@gmail.com</p>
+            </div>
+
+            <form class="contact-form">
+                <div class="input-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="input-group">
+                    <textarea placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn-send">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>

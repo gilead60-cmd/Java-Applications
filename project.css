@@ -1,0 +1,33 @@
+.h1{
+  width: 300px;
+  color: blueviolet;
+}
+
+.pion{
+  color: #C0706C;
+  font-family: Montserrat;
+  font-weight: Bold;
+  font-size: 25px;
+  vertical-align: center;
+  margin-bottom: 5px;
+  
+}
+
+.bible{
+  color: #4A6DA7
+}
+
+.bible:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.video{
+  color: #115bd2;
+  font-weight: bold;
+}
+
+.video:hover{
+  text-decoration: none;
+  cursor: pointer;
+}
